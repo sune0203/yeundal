@@ -2,6 +2,7 @@ package sub;
 import java.util.*;
 
 public class Calculator {
+	
 	int input ,result;
 	Random rd = new Random();
 	Scanner sc = new Scanner(System.in);
@@ -9,7 +10,7 @@ public class Calculator {
 	
 	public void rdata() {
 		for(int i = 0; i < 20; i++) {
-			this.list.add(rd.nextInt(89)+10);
+			list.add(rd.nextInt(89)+10);
 //			System.out.println(list.get(i));
 		}
 	}
@@ -61,9 +62,9 @@ public class Calculator {
 				}
 			}else if(input == 4) {
 				for(int r=0; r<list.size()/2; r++) {
-					result = list.get(i)/list.get(i+1);
+					double result = list.get(i)/list.get(i+1);
 					System.out.print(list.get(i)+" / "+list.get(i+1)+ " = ");
-					int dab = sc.nextInt();
+					double dab = sc.nextDouble();
 					if(result == dab) {
 						i++;
 						O++;
@@ -75,6 +76,7 @@ public class Calculator {
 			}else {
 				break;
 			}
+			System.out.println("O = "+O+" X = "+X);
 			input();
 			if(this.input == 0) {
 				break;
