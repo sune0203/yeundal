@@ -18,6 +18,8 @@ public class Calculator {
 	public void calcu() {
 		int O=0, X=0;
 		for(;;) {
+			try {
+			Scanner sc = new Scanner(System.in);
 			int i=0;
 			O=0;
 			X=0;
@@ -81,6 +83,10 @@ public class Calculator {
 			if(this.input == 0) {
 				break;
 			}
+			}
+		catch (Exception e) {
+			System.out.println("오류 발생 !!");
+		}
 		}
 		System.out.println("O = "+O+" X = "+X);
 	}
